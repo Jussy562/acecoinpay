@@ -26,7 +26,7 @@ function Checkout() {
 
 
   return (
-    <div className='w-full bg-white shadow-lg'>
+    <div className='w-full bg-white shadow-xl'>
         <div className='w-full flex flex-row justify-end'>
             <CloseButton />
         </div>
