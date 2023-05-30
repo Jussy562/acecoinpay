@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='px-12 py-20'>
+    <div className='px-4 md:px-12 md:py-20 py-5'>
       <Checkout />
         
     </div>

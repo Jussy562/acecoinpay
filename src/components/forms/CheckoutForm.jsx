@@ -125,15 +125,15 @@ function CheckoutForm({cardData, setCardData}) {
                 </div>
             </div>
 
-            <div className="mb-6 flex flex-row justify-between">
+            <div className="mb-6 flex flex-col md:flex-row md:justify-between">
                 
-                <label htmlFor="cvv" className="flex flex-col  text-start mb-2 text-sm font-medium text-black dark:text-white w-1/2">
+                <label htmlFor="cvv" className="flex flex-col  text-start mb-2 text-sm font-medium text-black dark:text-white w-full md:w-1/2">
                     <span className='font-bold'>CVV Number</span>
                     <span className='text-xs text-gray-400'>Enter the 3 or 4 digit number on the card</span>
                 </label>
                 
             
-                <div className={`flex flex-row justify-between items-centerpx-4 py-1.5 border   text-gray-900 text-lg rounded-lg   ${isCVVFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white`}>
+                <div className={`w-full md:w-1/2 flex flex-row justify-between items-centerpx-4 py-1.5 border   text-gray-900 text-lg rounded-lg   ${isCVVFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white`}>
                     <input type="text" id="cvv" maxLength={3}  
                     pattern='[0-9]*' 
                     className=" h-full w-full text-center rounded-l-lg border-none focus:outline-none bg-gray-50 focus:bg-blue-100 text-sm font-bold"
@@ -149,13 +149,13 @@ function CheckoutForm({cardData, setCardData}) {
                 </div>
             </div>
 
-            <div className="mb-6 flex flex-row justify-between w-full">
+            <div className="mb-6 flex flex-col md:flex-row justify-between w-full">
                 
-                <label htmlFor="expiry" className="flex flex-col w-1/2  text-start mb-2 text-sm font-medium text-black dark:text-white">
+                <label htmlFor="expiry" className="flex flex-col w-full md:w-1/2  text-start mb-2 text-sm font-medium text-black dark:text-white">
                     <span className='font-bold'>Expiry Date</span>
                     <span className='text-xs text-gray-400'>Enter the expiration date of the card</span>
                 </label>
-               <div className='flex flex-row items-center gap-3 w-1/2'>
+               <div className='flex flex-row items-center gap-3 w-full md:w-1/2'>
                 <input type="text" id="month"
                 maxLength={2}
                 className="bg-gray-50 text-center border border-gray-300 text-black font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-blue-500 focus:bg-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  
@@ -175,15 +175,15 @@ function CheckoutForm({cardData, setCardData}) {
             
                 
             </div>
-            <div className="mb-6 flex flex-row w-full">
+            <div className="mb-6 flex flex-col md:flex-row w-full">
                 
-                <label htmlFor="password" className="flex flex-col w-1/2 text-start mb-2 text-sm font-medium text-black dark:text-white">
+                <label htmlFor="password" className="flex flex-col w-full md:w-1/2 text-start mb-2 text-sm font-medium text-black dark:text-white">
                     <span className='font-bold'>Password</span>
                     <span className='text-xs text-gray-400'>Enter your dynamic password</span>
                 </label>
                 
             
-                <div className={`flex flex-row justify-between items-center bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg ${isPasswordFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}>
+                <div className={`flex flex-row justify-between items-center bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg ${isPasswordFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '}w-full md:w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}>
                     <input type="password" 
                     id="password" 
                     name='password'

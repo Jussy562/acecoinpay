@@ -15,10 +15,10 @@ function CheckoutDetails({cardData}) {
     const isExpiryValid = Month && Year;
     console.log(cardData);
   return (
-    <div className='w-full flex flex-row justify-end'>
+    <div className='w-full flex flex-row justify-end mt-24 md:mt-0'>
         <div className=' bg-[#e9eded] rounded-lg  flex flex-col justify-start w-full h-auto'>
         {/* Card details */}
-            <div className='px-8 relative left-0 right-0 -top-2 transform -translate-y-20 '>
+            <div className='px-8 relative left-0 right-0 -top-2 transform -translate-y-20 w-full'>
                 <div className=' cardInfo bg-white px-5 py-4 rounded-lg flex flex-col bg-opacity-10 shadow-xl'>
                     <div className='flex flex-row justify-between items-center mb-14'>
                         <div className=''>
