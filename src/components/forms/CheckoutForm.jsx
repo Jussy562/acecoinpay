@@ -103,7 +103,7 @@ function CheckoutForm({cardData, setCardData}) {
                     Edit
                 </p>
                 </div>
-                <div className={`w-full flex flex-row justify-between items-center  border  text-gray-900 text-lg px-4 py-1.5  rounded-lg  ${isCardNumberFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white `}>
+                <div className={`w-full flex flex-row justify-between items-center  border  text-gray-900 text-lg px-4 py-1.5  rounded-lg  ${isCardNumberFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:bg-blue-100 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white `}>
                     <div className='flex flex-row items-center gap-4 w-full'>
                         <img src={mastercard} alt='mastercard' className='w-8 h-6' />
                         <input type="text" id="cardNumber" 
@@ -133,17 +133,17 @@ function CheckoutForm({cardData, setCardData}) {
                 </label>
                 
             
-                <div className={`w-full md:w-1/2 flex flex-row justify-between items-center px-4 py-1.5 border   text-gray-900 text-lg rounded-lg   ${isCVVFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white`}>
+                <div className={`w-full md:w-1/2 flex flex-row justify-between items-center px-4 py-1.5 border   text-gray-900 text-lg rounded-lg   ${isCVVFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:bg-blue-100 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white`}>
                     <input type="text" id="cvv" maxLength={3}  
                     pattern='[0-9]*' 
-                    className=" h-full w-full text-center rounded-l-lg border-none focus:outline-none bg-gray-50 focus:bg-blue-100 text-sm font-bold"
+                    className=" h-full w-full text-center rounded-l-lg border-none focus:outline-none bg-gray-50 focus:bg-blue-100 text-sm font-bold p-2.5"
                     name='cvv'
                     value={cardData.cvv}
                     onChange={handleFormChange}
                     onFocus={handleCVVFocus}
                     onBlur={handleCVVBlur}
                     placeholder='234' required />
-                    <div className='p-2'>
+                    <div className='p-2 bg-none'>
                         <CgMenuGridO className='text-xl'/>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ function CheckoutForm({cardData, setCardData}) {
                     onBlur={handlePasswordBlur}
                     placeholder='********' 
                     required />
-                    <div className='p-2'>
+                    <div className='p-2 bg none'>
                         <CgMenuGridO className='text-xl'/>
                     </div>
                 </div>
