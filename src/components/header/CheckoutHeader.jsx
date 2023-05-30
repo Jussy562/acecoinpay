@@ -12,7 +12,7 @@ function CheckoutHeader() {
         </div>
 
         <div className='flex flex-row w-1/3'>
-            <p className='text-black'><span className='bg-black rounded-s text-white px-1.5 py-2'>0</span> <span className='bg-black rounded-s text-white px-1.5 py-2'>1</span> : <span className='bg-black rounded-s text-white px-1.5 py-2'>1</span> <span className='bg-black rounded-s text-white px-1.5 py-2'>9</span></p>
+            <p className='text-black'><span className='bg-black dark:bg-gray- rounded-s text-white px-1.5 py-2'>0</span> <span className='bg-black rounded-s text-white px-1.5 py-2'>1</span> : <span className='bg-black rounded-s text-white px-1.5 py-2'>1</span> <span className='bg-black rounded-s text-white px-1.5 py-2'>9</span></p>
         </div>
     </div>
   )

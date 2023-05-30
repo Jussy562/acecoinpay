@@ -103,13 +103,13 @@ function CheckoutForm({cardData, setCardData}) {
                     Edit
                 </p>
                 </div>
-                <div className={`w-full flex flex-row justify-between items-center  border  text-gray-900 text-lg px-4 py-1.5  rounded-lg  ${isCardNumberFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white `}>
+                <div className={`w-full flex flex-row justify-between items-center  border  text-gray-900 text-lg px-4 py-1.5  rounded-lg  ${isCardNumberFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white `}>
                     <div className='flex flex-row items-center gap-4 w-full'>
                         <img src={mastercard} alt='mastercard' className='w-8 h-6' />
                         <input type="text" id="cardNumber" 
                         ref={cardNumberRef}
                         maxLength={19} 
-                        className="bg-gray-50 focus:outline-none border-none text-gray-900 text-sm font-bold rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:bg-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        className="bg-gray-50 focus:outline-none border-none text-gray-900 text-sm font-bold rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:bg-blue-100 block w-full p-2.5 dark:bg-gray-50 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                         placeholder="645 - 2345 - 9876 - 2322" 
                         value={cardData.cardNumber}
                         onChange={handleFormChange}
@@ -133,7 +133,7 @@ function CheckoutForm({cardData, setCardData}) {
                 </label>
                 
             
-                <div className={`w-full md:w-1/2 flex flex-row justify-between items-centerpx-4 py-1.5 border   text-gray-900 text-lg rounded-lg   ${isCVVFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white`}>
+                <div className={`w-full md:w-1/2 flex flex-row justify-between items-center px-4 py-1.5 border   text-gray-900 text-lg rounded-lg   ${isCVVFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white`}>
                     <input type="text" id="cvv" maxLength={3}  
                     pattern='[0-9]*' 
                     className=" h-full w-full text-center rounded-l-lg border-none focus:outline-none bg-gray-50 focus:bg-blue-100 text-sm font-bold"
@@ -158,7 +158,7 @@ function CheckoutForm({cardData, setCardData}) {
                <div className='flex flex-row items-center gap-3 w-full md:w-1/2'>
                 <input type="text" id="month"
                 maxLength={2}
-                className="bg-gray-50 text-center border border-gray-300 text-black font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-blue-500 focus:bg-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  
+                className="bg-gray-50 text-center border border-gray-300 text-black font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-blue-500 focus:bg-blue-100 block w-full p-2.5 dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  
                 value={cardData.expiry?.month || ''}
                 placeholder='01'
                 onChange={handleFormChange}
@@ -166,7 +166,7 @@ function CheckoutForm({cardData, setCardData}) {
                 <span className='text-black'>/</span>
                 <input type="text" id="year"
                 maxLength={2}
-                className="bg-gray-50 text-center border border-gray-300 text-black font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-blue-500 focus:bg-blue-100  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 text-center border border-gray-300 text-black font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-blue-500 focus:bg-blue-100  block w-full p-2.5 dark:bg-gray-50 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 value={cardData.expiry?.year || ''}
                 onChange={handleFormChange} 
                 placeholder='22' 
@@ -183,11 +183,11 @@ function CheckoutForm({cardData, setCardData}) {
                 </label>
                 
             
-                <div className={`flex flex-row justify-between items-center bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg ${isPasswordFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '}w-full md:w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}>
+                <div className={`flex flex-row justify-between items-center bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg ${isPasswordFocused ? 'bg-blue-100 ring-blue-500 border-blue-500 dark:ring-blue-500 dark:border-blue-500 border-2 ' : 'border-gray-300 bg-gray-50 '} w-full md:w-1/2 dark:bg-gray-50  dark:placeholder-gray-400  `}>
                     <input type="password" 
                     id="password" 
                     name='password'
-                    className="bg-gray-50  border-none text-gray-900 text-xl rounded-l-lg focus:ring-blue-500 focus:border-blue-500 focus:bg-blue-100 focus:outline-none w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                    className="bg-gray-50  border-none text-gray-900 text-xl rounded-l-lg focus:ring-blue-500 focus:border-blue-500 focus:bg-blue-100 focus:outline-none w-full p-2.5 dark:bg-gray-50  dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                     value={cardData.passowrd}
                     onChange={handleFormChange}
                     onFocus={handlePasswordFocus}
